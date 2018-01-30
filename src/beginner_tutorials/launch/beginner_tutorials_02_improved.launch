@@ -1,0 +1,13 @@
+<launch>
+	
+
+	<rosparam command="load" file="/home/henry/catkin_ws/src/beginner_tutorials/params_02_improved.yml" />
+
+	<node pkg="beginner_tutorials" name="my_detection_publisher"  type="my_detection_publisher" output="screen">
+	</node>
+
+    <node pkg="beginner_tutorials" name="talker" type="talker" output="screen">
+		
+	</node>
+
+</launch>

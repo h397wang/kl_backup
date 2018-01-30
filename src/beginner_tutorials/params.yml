@@ -1,0 +1,12 @@
+/my_detection_publisher/detections_file: "/home/henry/WATO/prediction/prediction-ros/data/stop-sign-detections-01.txt"
+/talker/image_directory: "/home/henry/WATO/prediction/prediction-ros/data/images-01" 
+
+
+/klt/image_raw_node: "/frame_images"
+/img_obj_node: "/frame_obj_detections"
+
+rosdistro: 'kinetic'
+roslaunch:
+  uris: {host_henry_virtualbox__35809: 'http://henry-VirtualBox:35809/'}
+rosversion: '1.12.12'
+run_id: a41687de-fd93-11e7-87dc-080027bb4b63

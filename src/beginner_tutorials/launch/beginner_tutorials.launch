@@ -1,0 +1,20 @@
+<launch>
+	
+	<node pkg="cv_tracker" name="klt" type="klt_track" output="screen">
+		<param name="image_raw_node" type="str" value="/frame_images"/>
+    	<param name="img_obj_node" type="str" value="/frame_obj_detections"/>
+	</node>
+	
+
+	<node pkg="beginner_tutorials" name="my_detection_publisher"  type="my_detection_publisher" output="screen">
+    	<param name="/detections_file" type="str" value="$(env PREDICTION_REPO_PATH)/data/stop-sign-detections-01.txt"/> 	
+	</node>
+
+    <node pkg="beginner_tutorials" name="talker" type="talker" output="screen">
+		<param name="/image_directory" type="str" value="$(env PREDICTION_REPO_PATH)/data/images-01"/>
+	</node>
+
+    <node pkg="beginner_tutorials" name="subscriber" type="subscriber" output="screen">
+	</node>	
+
+</launch>
